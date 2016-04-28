@@ -11,8 +11,8 @@ WORKDIR ${SETUP_DIR}
 RUN apt-get update && apt-get install -y ruby ruby-dev build-essential && gem install bundler
 RUN bundle install 
 RUN librarian-puppet install 
-RUN puppet apply --modulepath=${MODULE_DIR} -e "class { 'jenkins': executors => 0,}" --debug
+RUN puppet apply --modulepath=${MODULE_DIR} -e "class { 'redis':; }" --debug
 
-#EXPOSE 6666 
-#EXPOSE 0000 
+EXPOSE 6379 
 
+CMD redis-server

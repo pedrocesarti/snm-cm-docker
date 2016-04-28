@@ -3,4 +3,4 @@
 
 forge "https://forgeapi.puppetlabs.com"
 
-#mod 'rtyler/jenkins'
+mod 'arioch/redis'
