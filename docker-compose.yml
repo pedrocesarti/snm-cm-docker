@@ -10,3 +10,7 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+  monitor:
+    build: ./sensu
+    ports:
+      - "4567:4567"
