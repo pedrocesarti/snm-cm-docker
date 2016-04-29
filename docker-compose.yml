@@ -5,3 +5,7 @@ services:
     build: ./redis
     ports:
       - "6379:6379"
+  message:
+    build: ./rabbitmq
+    ports:
+      - "5672:5672"
